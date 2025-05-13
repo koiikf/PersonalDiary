@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".activity.MainActivity">
+
+    <include layout="@layout/top_bar" />
+
+    <ScrollView
+        android:id="@+id/scrooll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="70dp"
+        android:background="#ECDBCC"
+        android:scrollbarSize="0dp"
+        android:tag="first_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/main_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="32dp"
+            android:layout_marginBottom="32dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/settings_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="second_color"
+                android:text="@string/settings_string"
+                android:textColor="#513D3D"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/select_theme_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="1"
+                android:tag="second_color"
+                android:text="@string/select_theme_of_app_string"
+                android:textColor="#513D3D"
+                android:textSize="21sp" />
+
+            <RadioGroup
+                android:id="@+id/select_theme_block"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/default_theme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#F65050"
+                    android:tag="second_color"
+                    android:text="@string/default_string"
+                    android:textColor="#513D3D" />
+
+                <RadioButton
+                    android:id="@+id/dark_theme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="second_color"
+                    android:text="@string/dark_theme"
+                    android:textColor="#513D3D" />
+
+                <RadioButton
+                    android:id="@+id/light_theme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="second_color"
+                    android:text="@string/light_theme_string"
+                    android:textColor="#513D3D" />
+
+                <RadioButton
+                    android:id="@+id/space_theme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="second_color"
+                    android:text="@string/space_string"
+                    android:textColor="#513D3D" />
+
+                <RadioButton
+                    android:id="@+id/modern_theme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#CE5656"
+                    android:tag="second_color"
+                    android:text="@string/modern_string"
+                    android:textColor="#513D3D" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        layout="@layout/bottom_bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

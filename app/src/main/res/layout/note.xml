@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".activity.MainActivity">
+
+    <include layout="@layout/top_bar" />
+
+    <ScrollView
+        android:id="@+id/scrooll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="70dp"
+        android:background="#ECDBCC"
+        android:scrollbarSize="0dp"
+        android:tag="first_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:id="@+id/main_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="32dp"
+            android:orientation="vertical"
+            android:paddingBottom="50dp">
+
+            <TextView
+                android:id="@+id/note_title_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:tag="second_color"
+                android:text="Название заметки"
+                android:textAlignment="center"
+                android:textColor="#513D3D"
+                android:textSize="28sp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/note_photo_card"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:cardCornerRadius="8dp">
+
+                <ImageView
+                    android:id="@+id/note_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:importantForAccessibility="no"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/stars" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/note_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:tag="second_color"
+                android:text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti commodi possimus atque voluptatum rem temporibus tempore totam! Beatae dolor voluptatum incidunt veniam eius deserunt aut repellendus pariatur tempore repudiandae, laboriosam assumenda velit similique dolorem qui labore maiores cumque fugiat nulla ut? Magnam nesciunt repellendus accusamus eius et odit autem cumque, quis officia voluptatem omnis velit debitis! Obcaecati et, blanditiis dolorem suscipit ab distinctio esse numquam rerum neque cupiditate tenetur nihil pariatur id assumenda ut adipisci! Modi fuga molestiae aspernatur, temporibus voluptatibus mollitia accusamus assumenda minus reprehenderit, sint quam eos similique placeat voluptate optio reiciendis fugit quibusdam quod voluptatum vel consequuntur. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti commodi possimus atque voluptatum rem temporibus tempore totam! Beatae dolor voluptatum incidunt veniam eius deserunt aut repellendus pariatur tempore repudiandae, laboriosam assumenda velit similique dolorem qui labore maiores cumque fugiat nulla ut? Magnam nesciunt repellendus accusamus eius et odit autem cumque, quis officia voluptatem omnis velit debitis! Obcaecati et, blanditiis dolorem suscipit ab distinctio esse numquam rerum neque cupiditate tenetur nihil pariatur id assumenda ut adipisci! Modi fuga molestiae aspernatur, temporibus voluptatibus mollitia accusamus assumenda minus reprehenderit, sint quam eos similique placeat voluptate optio reiciendis fugit quibusdam quod voluptatum vel consequuntur."
+                android:textAlignment="viewStart"
+                android:textColor="#513D3D"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/bottom_bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

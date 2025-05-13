@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".activity.MainActivity">
+
+    <include layout="@layout/top_bar" />
+
+    <ScrollView
+        android:id="@+id/scrooll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="70dp"
+        android:background="#ECDBCC"
+        android:scrollbarSize="0dp"
+        android:tag="first_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:id="@+id/main_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="32dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/add_title_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:tag="second_color"
+                android:text="@string/add_text_title_string"
+                android:textAlignment="center"
+                android:textColor="#513D3D"
+                android:textSize="28sp" />
+
+            <LinearLayout
+                android:id="@+id/title_input_block"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title_input_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:tag="second_color"
+                    android:text="@string/title_input_string"
+                    android:textColor="#513D3D"
+                    android:textSize="21sp" />
+
+                <EditText
+                    android:id="@+id/title_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:background="@drawable/rounded_corner_view2"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:padding="12dp"
+                    android:tag="first_color"
+                    android:textColor="#513D3D"
+                    android:textColorHint="#513D3D"
+                    android:textSize="16sp"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/description_input_block"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="32dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/description_input_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:tag="second_color"
+                    android:text="Текст"
+                    android:textColor="#513D3D"
+                    android:textSize="21sp" />
+
+
+                <EditText
+                    android:id="@+id/description_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="166dp"
+                    android:autofillHints=""
+                    android:background="@drawable/rounded_corner_view2"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:padding="12dp"
+                    android:tag="first_color"
+                    android:textColor="#513D3D"
+                    android:textColorHint="#513D3D"
+                    android:textSize="16sp"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/photo_input_block"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="32dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/photo_input_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:tag="second_color"
+                    android:text="@string/add_photo_string"
+                    android:textColor="#513D3D"
+                    android:textSize="21sp" />
+
+                <LinearLayout
+                    android:id="@+id/image_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="12dp"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/note_photo_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        app:cardCornerRadius="8dp">
+
+                        <ImageView
+                            android:id="@+id/note_photo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:importantForAccessibility="no"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/stars" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/add_photo_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_corner_view_button3"
+                        android:paddingLeft="32dp"
+                        android:paddingRight="32dp"
+                        android:tag="second_color"
+                        android:text="@string/add_photo_string"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textColor="#ECDBCC" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/save_note_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="64dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner_view_button3"
+                android:tag="second_color"
+                android:text="@string/save_note_string"
+                android:textAllCaps="false"
+                android:textColor="#ECDBCC" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/bottom_bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

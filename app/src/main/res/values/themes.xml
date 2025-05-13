@@ -1,0 +1,104 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.PersonalDiary" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:popupMenuStyle">@style/BasePopupMenuStyle</item>
+        <item name="android:textAppearanceSmallPopupMenu">@style/myPopupMenuTextAppearanceSmall</item>
+        <item name="android:textAppearanceLargePopupMenu">@style/myPopupMenuTextAppearanceLarge</item>
+    </style>
+
+    <style name="Dark" parent="Base.Theme.PersonalDiary">
+        <item name="android:popupMenuStyle">@style/PopupDark</item>
+        <item name="android:textAppearanceSmallPopupMenu">@style/myPopupMenuTextAppearanceSmallDark</item>
+        <item name="android:textAppearanceLargePopupMenu">@style/myPopupMenuTextAppearanceLargeDark</item>
+    </style>
+
+    <style name="Light" parent="Base.Theme.PersonalDiary">
+        <item name="android:popupMenuStyle">@style/PopupLight</item>
+        <item name="android:textAppearanceSmallPopupMenu">@style/myPopupMenuTextAppearanceSmallLight</item>
+        <item name="android:textAppearanceLargePopupMenu">@style/myPopupMenuTextAppearanceLargeLight</item>
+    </style>
+
+    <style name="Space" parent="Base.Theme.PersonalDiary">
+        <item name="android:popupMenuStyle">@style/PopupSpace</item>
+        <item name="android:textAppearanceSmallPopupMenu">@style/myPopupMenuTextAppearanceSmallSpace</item>
+        <item name="android:textAppearanceLargePopupMenu">@style/myPopupMenuTextAppearanceLargeSpace</item>
+    </style>
+
+    <style name="Modern" parent="Base.Theme.PersonalDiary">
+        <item name="android:popupMenuStyle">@style/PopupModern</item>
+        <item name="android:textAppearanceSmallPopupMenu">@style/myPopupMenuTextAppearanceSmallModern</item>
+        <item name="android:textAppearanceLargePopupMenu">@style/myPopupMenuTextAppearanceLargeModern</item>
+    </style>
+
+    <style name="Theme.PersonalDiary" parent="Base.Theme.PersonalDiary" />
+
+    <style name="BasePopupMenuStyle" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@color/popup_background_color</item>
+    </style>
+
+    <style name="PopupLight" parent="BasePopupMenuStyle">
+        <item name="android:popupBackground">@color/popup_text_color_dark</item>
+    </style>
+
+    <style name="PopupDark" parent="BasePopupMenuStyle">
+        <item name="android:popupBackground">@color/popup_background_color_dark</item>
+    </style>
+
+    <style name="PopupSpace" parent="BasePopupMenuStyle">
+        <item name="android:popupBackground">@color/popup_background_color_space</item>
+    </style>
+
+    <style name="PopupModern" parent="BasePopupMenuStyle">
+        <item name="android:popupBackground">@color/popup_background_color_modern</item>
+    </style>
+
+    <style name="myPopupMenuTextAppearanceSmall" parent="@android:style/TextAppearance.DeviceDefault.Widget.PopupMenu.Small">
+        <item name="android:textColor">@color/popup_text_color</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="myPopupMenuTextAppearanceLarge" parent="@android:style/TextAppearance.DeviceDefault.Widget.PopupMenu.Large">
+        <item name="android:textColor">@color/popup_text_color</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="myPopupMenuTextAppearanceSmallDark" parent="@android:style/TextAppearance.DeviceDefault.Widget.PopupMenu.Small">
+        <item name="android:textColor">@color/popup_text_color_dark</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="myPopupMenuTextAppearanceLargeDark" parent="@android:style/TextAppearance.DeviceDefault.Widget.PopupMenu.Large">
+        <item name="android:textColor">@color/popup_text_color_dark</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="myPopupMenuTextAppearanceSmallLight" parent="@android:style/TextAppearance.DeviceDefault.Widget.PopupMenu.Small">
+        <item name="android:textColor">@color/popup_background_color_dark</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="myPopupMenuTextAppearanceLargeLight" parent="@android:style/TextAppearance.DeviceDefault.Widget.PopupMenu.Large">
+        <item name="android:textColor">@color/popup_background_color_dark</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="myPopupMenuTextAppearanceSmallSpace" parent="@android:style/TextAppearance.DeviceDefault.Widget.PopupMenu.Small">
+        <item name="android:textColor">@color/popup_text_color_space</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="myPopupMenuTextAppearanceLargeSpace" parent="@android:style/TextAppearance.DeviceDefault.Widget.PopupMenu.Large">
+        <item name="android:textColor">@color/popup_text_color_space</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="myPopupMenuTextAppearanceSmallModern" parent="@android:style/TextAppearance.DeviceDefault.Widget.PopupMenu.Small">
+        <item name="android:textColor">@color/popup_text_color_modern</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="myPopupMenuTextAppearanceLargeModern" parent="@android:style/TextAppearance.DeviceDefault.Widget.PopupMenu.Large">
+        <item name="android:textColor">@color/popup_text_color_modern</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+</resources>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".activity.MainActivity">
+
+    <include layout="@layout/top_bar" />
+
+    <ScrollView
+        android:id="@+id/scrooll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="70dp"
+        android:background="#ECDBCC"
+        android:scrollbarSize="0dp"
+        android:tag="first_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/main_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="32dp"
+            android:layout_marginBottom="32dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/profile_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="second_color"
+                android:text="@string/profile_string"
+                android:textColor="#513D3D"
+                android:textSize="28sp" />
+
+            <LinearLayout
+                android:id="@+id/profile_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="32dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="32dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/profile_image_card"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="360dp">
+
+                        <ImageView
+                            android:id="@+id/profile_user_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:cropToPadding="false"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/profile_anonymous"
+                            app:srcCompat="@drawable/profile_anonymous"
+                            tools:ignore="ImageContrastCheck" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/add_photo_button2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_corner_view_button3"
+                        android:gravity="center"
+                        android:paddingLeft="32dp"
+                        android:paddingRight="32dp"
+                        android:tag="second_color"
+                        android:text="@string/add_photo_string"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textColor="#ECDBCC" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/nik_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_weight="1"
+                    android:tag="second_color"
+                    android:text="@string/nik_string"
+                    android:textColor="#513D3D"
+                    android:textSize="21sp" />
+
+                <EditText
+                    android:id="@+id/nik_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autofillHints=""
+                    android:background="@drawable/rounded_corner_view2"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:padding="12dp"
+                    android:tag="first_color"
+                    android:textColor="#513D3D"
+                    android:textColorHint="#513D3D"
+                    android:textSize="16sp"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <TextView
+                    android:id="@+id/profile_email_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_weight="1"
+                    android:tag="second_color"
+                    android:text="Почта"
+                    android:textColor="#513D3D"
+                    android:textSize="21sp" />
+
+                <EditText
+                    android:id="@+id/profile_email_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autofillHints=""
+                    android:background="@drawable/rounded_corner_view2"
+                    android:cursorVisible="false"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:inputType="text|textEmailAddress"
+                    android:padding="12dp"
+                    android:tag="first_color"
+                    android:textColor="#513D3D"
+                    android:textColorHint="#513D3D"
+                    android:textSize="16sp"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/save_profile_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_corner_view_button3"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="32dp"
+                    android:tag="second_color"
+                    android:text="@string/save_updates_string"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:textColor="#ECDBCC" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/bottom_bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

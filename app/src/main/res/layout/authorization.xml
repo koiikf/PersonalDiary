@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8F8"
+    tools:context=".activity.MainActivity">
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#513D3D"
+        android:tag="first_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:id="@+id/authorization_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="128dp"
+            android:orientation="vertical"
+            android:paddingLeft="32dp"
+            android:paddingTop="16dp"
+            android:paddingRight="32dp">
+
+            <TextView
+                android:id="@+id/app_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:tag="second_color"
+                android:text="@string/app_name"
+                android:textAlignment="center"
+                android:textColor="#ECDBCC"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/authorization_title_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:tag="second_color"
+                android:text="@string/authorization_title_string"
+                android:textAlignment="center"
+                android:textColor="#ECDBCC"
+                android:textSize="21sp" />
+
+            <LinearLayout
+                android:id="@+id/form"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/form_background"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/error_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="#E23C3C"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/email_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:tag="second_color"
+                        android:text="@string/email_text_string"
+                        android:textColor="#ECDBCC"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/email_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="32dp"
+                        android:autofillHints=""
+                        android:background="@drawable/rounded_corner_view"
+                        android:drawableStart="@drawable/email_input_icon"
+                        android:drawablePadding="12dp"
+                        android:drawableTint="#513D3D"
+                        android:ems="10"
+                        android:hint="@string/email_string"
+                        android:inputType="textEmailAddress"
+                        android:padding="12dp"
+                        android:tag="first_color"
+                        android:textColor="#513D3D"
+                        android:textColorHint="#513D3D"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/password_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:tag="second_color"
+                        android:text="@string/password_string"
+                        android:textColor="#ECDBCC"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/password_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autofillHints=""
+                        android:background="@drawable/rounded_corner_view"
+                        android:drawableStart="@drawable/password_input_icon"
+                        android:drawablePadding="12dp"
+                        android:drawableTint="#513D3D"
+                        android:ems="10"
+                        android:hint="@string/password_string"
+                        android:inputType="textPassword"
+                        android:padding="12dp"
+                        android:tag="first_color"
+                        android:textColor="#513D3D"
+                        android:textColorHint="#513D3D"
+                        android:textSize="16sp"
+                        tools:ignore="DuplicateSpeakableTextCheck" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bottom_part_of_registration_form"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/registration_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_corner_view_button2"
+                        android:tag="first_color"
+                        android:text="@string/register_string"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textColor="#ECDBCC"
+                        android:textSize="14sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/authorization_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:background="@drawable/rounded_corner_view_button"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="8dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="8dp"
+                        android:tag="second_color"
+                        android:text="@string/enter_string"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textColor="#513D3D"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

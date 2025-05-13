@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.bottomnavigation.BottomNavigationView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_bar"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="#513D3D"
+    android:tag="second_color"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    tools:showIn="@layout/settings">
+
+    <LinearLayout
+        android:id="@+id/bottom_bar_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/notes_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/notes_image"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:tag="first_color"
+                app:srcCompat="@drawable/notes_icon" />
+
+            <TextView
+                android:id="@+id/notes_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:tag="first_color"
+                android:text="@string/notes_string"
+                android:textColor="#ECDBCC" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/settings_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/settings_image"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:contentDescription="@string/settings_string"
+                android:tag="first_color"
+                app:srcCompat="@drawable/settings" />
+
+            <TextView
+                android:id="@+id/recipes_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:tag="first_color"
+                android:text="@string/settings_string"
+                android:textColor="#ECDBCC" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/profile_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:contentDescription="@string/profile_string"
+                android:tag="first_color"
+                app:srcCompat="@drawable/user_icon" />
+
+            <TextView
+                android:id="@+id/profile_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:tag="first_color"
+                android:text="@string/profile_string"
+                android:textColor="#ECDBCC" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/favourites_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/favourites_image"
+                android:layout_width="24dp"
+                android:layout_height="28dp"
+                android:contentDescription="@string/favourity_string"
+                android:tag="first_color"
+                app:srcCompat="@drawable/bookmark_icon" />
+
+            <TextView
+                android:id="@+id/favourites_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:tag="first_color"
+                android:text="@string/favourity_string"
+                android:textColor="#ECDBCC" />
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.bottomnavigation.BottomNavigationView>
